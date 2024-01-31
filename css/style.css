@@ -116,8 +116,8 @@ li {
 }
 
 #preloader{
-  background: rgb(249 249 255) url(./images/preloader.gif) no-repeat center;
-  background-size: 10%;
+  background: var(--bg) url('./images/preloader.gif') no-repeat center;
+  background-size: 15%;
   height: 100vh;
   width: 100%;
   position: fixed;

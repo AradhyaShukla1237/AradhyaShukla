@@ -116,7 +116,7 @@ li {
 }
 
 #preloader{
-  background: var(--bg) url('./images/preloader.gif') no-repeat center;
+  background: var(--bg) url(/images/preloader.gif) no-repeat center;
   background-size: 15%;
   height: 100vh;
   width: 100%;
@@ -1178,7 +1178,7 @@ footer .wave{
   left: 0;
   width: 100%;
   height: 100px;
-  background: url('./images/wave.png');
+  background: url(/images/wave.png);
   background-size: 1000px 100px;
 }
 footer .wave#wave1 {
@@ -1410,6 +1410,9 @@ Media Queries Section
   #element{
     font-size: 3.5rem;
   }
+  #preloader{
+    background-size: 15%;
+  }
   .section-hero-data .hero-top-data {
     /* align-self: flex-start; */
     font-size: 4rem;
@@ -1474,6 +1477,9 @@ Media Queries Section
   .hero-typing-text{
     font-size: 3rem;
     margin-left: -5px;
+  }
+  #preloader{
+    background-size: 10%;
   }
   #element{
     font-size: 3rem;

@@ -60,9 +60,11 @@ li {
 }
 
 .btn {
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
 
   padding: 1.6rem 3.2rem;
   border: none;
@@ -110,18 +112,32 @@ li {
 }
 
 .grid-four-col {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4,1fr);
 }
-
 #preloader {
-  background: var(--bg) url(images/loader.gif) no-repeat center center;
-  background-size: 15%;
-  height: 100vh;
-  width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 100;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.loader {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 /* ===========================================
 Header Section Start
 ======================================= */
@@ -214,7 +230,6 @@ Hero  Section Start
   justify-content: center;
   align-items: flex-start;
 }
-
 .hero-top-data {
   text-transform: uppercase;
   color: var(--heading);
@@ -222,17 +237,14 @@ Hero  Section Start
   font-size: 3.8rem;
   color: var(--helper);
 }
-
-.hero-typing-text {
+.hero-typing-text{
   font-size: 3.5rem;
   color: black;
   font-weight: 700;
 }
-
-span {
+span{
   color: var(--helper);
 }
-
 .hero-heading {
   text-transform: uppercase;
   font-weight: 900;
@@ -334,37 +346,38 @@ h3 {
   top: 0;
   left: 0;
   height: inherit;
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   border-radius: 10rem;
 }
-
-.bio-progress-bar-2 {
-  width: 100%;
-  height: 0.8rem;
-  /* background: var(--para); */
-  background-color: rgb(233 236 239);
-  border-radius: 10rem;
-  position: relative;
-  box-shadow: var(--shadow);
-  /* overflow: hidden; */
+.bio-progress-bar-2{
+    width: 100%;
+    height: 0.8rem;
+    /* background: var(--para); */
+    background-color: rgb(233 236 239);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+    /* overflow: hidden; */
 }
-
-.bio-progress-bar-2::before {
+.bio-progress-bar-2::before{
   content: "";
   position: absolute;
   width: 99%;
   top: 0;
   left: 0;
   height: inherit;
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   border-radius: 10rem;
 }
-
-.bio-progress-bar-2 span {
+.bio-progress-bar-2 span{
   position: absolute;
   top: 1.8rem;
   left: 94.6%;
@@ -379,43 +392,41 @@ h3 {
   border: none;
   outline: none;
 }
-
-.bio-progress-bar-2 span::after {
-  content: "";
-  position: absolute;
-  top: -1.6rem;
-  width: 0rem;
-  height: 0rem;
-  border: 0.8rem solid var(--helper);
-  border-color: transparent;
-  border-bottom-color: var(--helper);
+.bio-progress-bar-2 span::after{
+   content: "";
+   position: absolute;
+   top: -1.6rem;
+   width: 0rem;
+   height: 0rem;
+   border: 0.8rem solid var(--helper);
+   border-color: transparent;
+   border-bottom-color: var(--helper);
 }
-
-.bio-progress-bar-3 {
-  width: 100%;
-  height: 0.8rem;
-  /* background: var(--para); */
-  background-color: rgb(233 236 239);
-  border-radius: 10rem;
-  position: relative;
-  box-shadow: var(--shadow);
-  /* overflow: hidden; */
+.bio-progress-bar-3{
+    width: 100%;
+    height: 0.8rem;
+    /* background: var(--para); */
+    background-color: rgb(233 236 239);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+    /* overflow: hidden; */
 }
-
-.bio-progress-bar-3::before {
+.bio-progress-bar-3::before{
   content: "";
   position: absolute;
   width: 96%;
   top: 0;
   left: 0;
   height: inherit;
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   border-radius: 10rem;
 }
-
-.bio-progress-bar-3 span {
+.bio-progress-bar-3 span{
   position: absolute;
   top: 1.8rem;
   left: 91.5%;
@@ -430,43 +441,41 @@ h3 {
   border: none;
   outline: none;
 }
-
-.bio-progress-bar-3 span::after {
-  content: "";
-  position: absolute;
-  top: -1.6rem;
-  width: 0rem;
-  height: 0rem;
-  border: 0.8rem solid var(--helper);
-  border-color: transparent;
-  border-bottom-color: var(--helper);
+.bio-progress-bar-3 span::after{
+   content: "";
+   position: absolute;
+   top: -1.6rem;
+   width: 0rem;
+   height: 0rem;
+   border: 0.8rem solid var(--helper);
+   border-color: transparent;
+   border-bottom-color: var(--helper);
 }
-
-.bio-progress-bar-4 {
-  width: 100%;
-  height: 0.8rem;
-  /* background: var(--para); */
-  background-color: rgb(233 236 239);
-  border-radius: 10rem;
-  position: relative;
-  box-shadow: var(--shadow);
-  /* overflow: hidden; */
+.bio-progress-bar-4{
+    width: 100%;
+    height: 0.8rem;
+    /* background: var(--para); */
+    background-color: rgb(233 236 239);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+    /* overflow: hidden; */
 }
-
-.bio-progress-bar-4::before {
+.bio-progress-bar-4::before{
   content: "";
   position: absolute;
   width: 85%;
   top: 0;
   left: 0;
   height: inherit;
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   border-radius: 10rem;
 }
-
-.bio-progress-bar-4 span {
+.bio-progress-bar-4 span{
   position: absolute;
   top: 1.8rem;
   left: 80.7%;
@@ -481,43 +490,41 @@ h3 {
   border: none;
   outline: none;
 }
-
-.bio-progress-bar-4 span::after {
-  content: "";
-  position: absolute;
-  top: -1.6rem;
-  width: 0rem;
-  height: 0rem;
-  border: 0.8rem solid var(--helper);
-  border-color: transparent;
-  border-bottom-color: var(--helper);
+.bio-progress-bar-4 span::after{
+   content: "";
+   position: absolute;
+   top: -1.6rem;
+   width: 0rem;
+   height: 0rem;
+   border: 0.8rem solid var(--helper);
+   border-color: transparent;
+   border-bottom-color: var(--helper);
 }
-
-.bio-progress-bar-5 {
-  width: 100%;
-  height: 0.8rem;
-  /* background: var(--para); */
-  background-color: rgb(233 236 239);
-  border-radius: 10rem;
-  position: relative;
-  box-shadow: var(--shadow);
-  /* overflow: hidden; */
+.bio-progress-bar-5{
+    width: 100%;
+    height: 0.8rem;
+    /* background: var(--para); */
+    background-color: rgb(233 236 239);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+    /* overflow: hidden; */
 }
-
-.bio-progress-bar-5::before {
+.bio-progress-bar-5::before{
   content: "";
   position: absolute;
   width: 97%;
   top: 0;
   left: 0;
   height: inherit;
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   border-radius: 10rem;
 }
-
-.bio-progress-bar-5 span {
+.bio-progress-bar-5 span{
   position: absolute;
   top: 1.8rem;
   left: 92.7%;
@@ -532,43 +539,41 @@ h3 {
   border: none;
   outline: none;
 }
-
-.bio-progress-bar-5 span::after {
-  content: "";
-  position: absolute;
-  top: -1.6rem;
-  width: 0rem;
-  height: 0rem;
-  border: 0.8rem solid var(--helper);
-  border-color: transparent;
-  border-bottom-color: var(--helper);
+.bio-progress-bar-5 span::after{
+   content: "";
+   position: absolute;
+   top: -1.6rem;
+   width: 0rem;
+   height: 0rem;
+   border: 0.8rem solid var(--helper);
+   border-color: transparent;
+   border-bottom-color: var(--helper);
 }
-
-.bio-progress-bar-6 {
-  width: 100%;
-  height: 0.8rem;
-  /* background: var(--para); */
-  background-color: rgb(233 236 239);
-  border-radius: 10rem;
-  position: relative;
-  box-shadow: var(--shadow);
-  /* overflow: hidden; */
+.bio-progress-bar-6{
+    width: 100%;
+    height: 0.8rem;
+    /* background: var(--para); */
+    background-color: rgb(233 236 239);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+    /* overflow: hidden; */
 }
-
-.bio-progress-bar-6::before {
+.bio-progress-bar-6::before{
   content: "";
   position: absolute;
   width: 90%;
   top: 0;
   left: 0;
   height: inherit;
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   border-radius: 10rem;
 }
-
-.bio-progress-bar-6 span {
+.bio-progress-bar-6 span{
   position: absolute;
   top: 1.8rem;
   left: 85.7%;
@@ -583,43 +588,41 @@ h3 {
   border: none;
   outline: none;
 }
-
-.bio-progress-bar-6 span::after {
-  content: "";
-  position: absolute;
-  top: -1.6rem;
-  width: 0rem;
-  height: 0rem;
-  border: 0.8rem solid var(--helper);
-  border-color: transparent;
-  border-bottom-color: var(--helper);
+.bio-progress-bar-6 span::after{
+   content: "";
+   position: absolute;
+   top: -1.6rem;
+   width: 0rem;
+   height: 0rem;
+   border: 0.8rem solid var(--helper);
+   border-color: transparent;
+   border-bottom-color: var(--helper);
 }
-
-.bio-progress-bar-7 {
-  width: 100%;
-  height: 0.8rem;
-  /* background: var(--para); */
-  background-color: rgb(233 236 239);
-  border-radius: 10rem;
-  position: relative;
-  box-shadow: var(--shadow);
-  /* overflow: hidden; */
+.bio-progress-bar-7{
+    width: 100%;
+    height: 0.8rem;
+    /* background: var(--para); */
+    background-color: rgb(233 236 239);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+    /* overflow: hidden; */
 }
-
-.bio-progress-bar-7::before {
+.bio-progress-bar-7::before{
   content: "";
   position: absolute;
   width: 95%;
   top: 0;
   left: 0;
   height: inherit;
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   border-radius: 10rem;
 }
-
-.bio-progress-bar-7 span {
+.bio-progress-bar-7 span{
   position: absolute;
   top: 1.8rem;
   left: 90.6%;
@@ -634,18 +637,16 @@ h3 {
   border: none;
   outline: none;
 }
-
-.bio-progress-bar-7 span::after {
-  content: "";
-  position: absolute;
-  top: -1.6rem;
-  width: 0rem;
-  height: 0rem;
-  border: 0.8rem solid var(--helper);
-  border-color: transparent;
-  border-bottom-color: var(--helper);
+.bio-progress-bar-7 span::after{
+   content: "";
+   position: absolute;
+   top: -1.6rem;
+   width: 0rem;
+   height: 0rem;
+   border: 0.8rem solid var(--helper);
+   border-color: transparent;
+   border-bottom-color: var(--helper);
 }
-
 /* to create the rectangle box  */
 .bio-progress-bar span {
   position: absolute;
@@ -710,9 +711,11 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   opacity: 0;
   color: var(--third);
   display: flex;
@@ -724,7 +727,7 @@ h3 {
   /* box-shadow: inset 0 0 0 0.5rem var(--helper-tint); */
 }
 
-.img-ovelay:hover>.overlay {
+.img-ovelay:hover > .overlay {
   opacity: 0.8;
   transform: translateY(0);
   cursor: pointer;
@@ -735,15 +738,12 @@ h3 {
   color: var(--third);
   text-decoration: none;
 }
-
-.p-btns {
+.p-btns{
   margin-top: 50px;
 }
-
-.p-btn {
+.p-btn{
   margin: 0 23px;
 }
-
 .p-btn-active {
   transform: translateY(-1rem);
 }
@@ -756,9 +756,11 @@ h3 {
 work data Section
 ======================================= */
 .section-work-data {
-  background: -webkit-linear-gradient(0deg,
-      rgb(132 144 255) 0%,
-      rgb(98 189 252) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
   color: var(--third);
   text-align: center;
 }
@@ -826,11 +828,9 @@ Services Section
   0% {
     border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
   }
-
   50% {
     border-radius: 3% 97% 15% 85% / 72% 0% 100% 28%;
   }
-
   100% {
     border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
   }
@@ -882,7 +882,6 @@ Resume Section
 .resume-data-left .grid {
   gap: 1.5rem;
 }
-
 .resume-data-left .grid p,
 .resume-data-right p {
   font-size: 1.4rem;
@@ -1043,12 +1042,10 @@ freelancer  Section
   position: relative;
   background-attachment: fixed;
 }
-
-.section-freelancer .a {
+.section-freelancer .a{
   color: white;
   text-decoration: underline;
 }
-
 .section-freelancer .overlay {
   content: "";
   position: absolute;
@@ -1077,11 +1074,9 @@ freelancer  Section
   color: var(--third);
   margin-bottom: 1.8rem;
 }
-
-.section-freelancer p {
+.section-freelancer p{
   font-size: 20px;
 }
-
 /* ===========================================
 contact Section
 ======================================= */
@@ -1097,7 +1092,6 @@ contact Section
   flex-direction: column;
   gap: 3rem;
 }
-
 .section-contact-main .grid {
   gap: 2.4rem;
 }
@@ -1112,7 +1106,6 @@ textarea {
   font-family: "work sans";
   outline: none;
 }
-
 .section-contact-main textarea {
   height: 15rem;
   outline: none;
@@ -1131,7 +1124,7 @@ textarea {
 /* ===========================================
 Footer Section
 ======================================= */
-footer {
+footer{
   position: relative;
   width: 100%;
   background: #3586ff;
@@ -1142,8 +1135,7 @@ footer {
   justify-content: center;
   flex-direction: column;
 }
-
-footer .social_icons {
+footer .social_icons{
   position: relative;
   display: flex;
   align-items: center;
@@ -1151,112 +1143,95 @@ footer .social_icons {
   margin: 10px 0;
   flex-wrap: wrap;
 }
-
-footer .menu {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px 0;
-  flex-wrap: wrap;
+footer .menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    flex-wrap: wrap;
 }
-
-footer .social_icons li {
+footer .social_icons li{
   list-style: none;
 }
-
-footer .menu li {
+footer .menu li{
   list-style: none;
   margin-left: -5px;
 }
-
-footer .social_icons li a {
-  font-size: 3.5em;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
+footer .social_icons li a{
+    font-size: 3.5em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
 }
-
-footer .menu li a {
-  font-size: 2.5em;
-  color: #fff;
-  margin: 0 50px;
-  display: inline-block;
-  opacity: 0.75;
+footer .menu li a{
+    font-size: 2.5em;
+    color: #fff;
+    margin: 0 50px;
+    display: inline-block;
+    opacity: 0.75;
 }
-
-footer .menu li a:hover {
+footer .menu li a:hover{
   opacity: 1;
   transition: 1s;
 }
-
-footer .social_icons li a:hover {
+footer .social_icons li a:hover{
   transform: translateY(-10px);
 }
-
-footer p {
+footer p{
   color: #fff;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 10px;
   font-size: 2em;
 }
-
-footer .wave {
+footer .wave{
   position: absolute;
   top: -90px;
   left: 0;
   width: 100%;
   height: 100px;
-  background: url(images/wave.png);
+  background-image: url(./images/wave.png);
   background-size: 1000px 100px;
 }
-
 footer .wave#wave1 {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
   animation: animateWave 1s linear infinite;
 }
-
 footer .wave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
   animation: animateWave_02 1s linear infinite;
 }
-
 footer .wave#wave3 {
   z-index: 1000;
   opacity: 0.2;
   bottom: 15px;
   animation: animateWave_02 1s linear infinite;
 }
-
 footer .wave#wave4 {
   z-index: 999;
   opacity: 0.7;
   bottom: 20px;
   animation: animateWave_02 1s linear infinite;
 }
-
-@keyframes animateWave {
-  0% {
+@keyframes animateWave{
+  0%{
     background-position-x: 1000px;
   }
-
-  100% {
+  100%{
     background-position-x: 0px;
   }
 }
-
-@keyframes animateWave_02 {
-  0% {
+@keyframes animateWave_02{
+  0%{
     background-position-x: 0px;
   }
-
-  100% {
+  100%{
     background-position-x: 1000px;
   }
 }
@@ -1292,7 +1267,6 @@ Media Queries Section
   .container {
     max-width: 130rem;
   }
-
   .navbar-lists {
     gap: 3.4rem;
   }
@@ -1303,7 +1277,6 @@ Media Queries Section
   .container {
     max-width: 110rem;
   }
-
   .navbar-lists {
     gap: 3.4rem;
   }
@@ -1311,7 +1284,6 @@ Media Queries Section
 
 /* media queries less then 980px */
 @media (max-width: 980px) {
-
   /* to make all the container with same padding  */
   .container {
     padding: 0 3.2rem;
@@ -1324,7 +1296,7 @@ Media Queries Section
   /* when we are in 980px we need to show the menu open icon */
   .mobile-navbar-btn {
     display: block;
-    /*  background-color: #212529;*/
+  /*  background-color: #212529;*/
     z-index: 99999;
     border: 3px solid #212529;
     color: #212529;
@@ -1417,7 +1389,6 @@ Media Queries Section
   .section-resume .grid-two-col img {
     width: 50%;
   }
-
   .resume-img {
     grid-row: 2;
     transform: translateY(-2rem);
@@ -1438,7 +1409,6 @@ Media Queries Section
   .container {
     max-width: 720px;
   }
-
   /* hero section  */
   .section-hero .grid-two-col {
     grid-template-columns: 1fr;
@@ -1447,29 +1417,23 @@ Media Queries Section
   .section-hero-data {
     align-items: center;
   }
-
-  .hero-typing-text {
+  .hero-typing-text{
     margin-left: -50px;
     font-size: 4rem;
   }
-
-  #element {
+  #element{
     font-size: 3.5rem;
   }
-
-  #preloader {
+  #preloader{
     background-size: 15%;
   }
-
   .section-hero-data .hero-top-data {
     /* align-self: flex-start; */
     font-size: 4rem;
   }
-
   .hero-heading {
     text-align: center;
   }
-
   .hero-para {
     text-align: center;
     margin-top: 2rem;
@@ -1478,49 +1442,38 @@ Media Queries Section
   .section-hero img {
     width: 70%;
   }
-
-  .bio-progress-bar span {
+  .bio-progress-bar span{
     left: 82.8%;
-  }
-
-  .bio-progress-bar-2 span {
+  }  
+  .bio-progress-bar-2 span{
     left: 91.7%;
   }
-
-  .bio-progress-bar-3 span {
+  .bio-progress-bar-3 span{
     left: 88.4%;
   }
-
-  .bio-progress-bar-4 span {
+  .bio-progress-bar-4 span{
     left: 77.3%;
   }
-
-  .bio-progress-bar-5 span {
+  .bio-progress-bar-5 span{
     left: 89.3%;
   }
-
-  .bio-progress-bar-6 span {
+  .bio-progress-bar-6 span{
     left: 82.3%;
   }
-
-  .bio-progress-bar-7 span {
+  .bio-progress-bar-7 span{
     left: 87.2%;
   }
-
-  /* work section  */
+    /* work section  */
   .section-portfolio .grid-three-col {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .p-btns {
+  .p-btns{
     margin-left: 70px;
   }
-
-  .common-heading {
+  .common-heading{
     font-size: 35px;
   }
 }
-
 /* Below 560px  */
 @media (max-width: 35em) {
   .header {
@@ -1530,86 +1483,67 @@ Media Queries Section
   .header .logo {
     width: 60%;
   }
-
   /* secion .bio-data */
 
   .section-biodata .grid-two-col {
     grid-template-columns: 1fr;
   }
-
-  .hero-typing-text {
+  .hero-typing-text{
     font-size: 3rem;
     margin-left: -5px;
   }
-
-  #preloader {
+  #preloader{
     background-size: 10%;
   }
-
-  #element {
+  #element{
     font-size: 3rem;
   }
-
   .section-biodata .bio-image {
     grid-row: 2;
     margin-top: 3.2rem;
   }
-
-  .bio-progress-bar span {
+  .bio-progress-bar span{
     left: 82.8%;
-  }
-
-  .bio-progress-bar-2 span {
+  }  
+  .bio-progress-bar-2 span{
     left: 92%;
   }
-
-  .bio-progress-bar-3 span {
+  .bio-progress-bar-3 span{
     left: 88.7%;
   }
-
-  .bio-progress-bar-4 span {
+  .bio-progress-bar-4 span{
     left: 77.8%;
   }
-
-  .bio-progress-bar-5 span {
+  .bio-progress-bar-5 span{
     left: 89.8%;
   }
-
-  .bio-progress-bar-6 span {
+  .bio-progress-bar-6 span{
     left: 82.7%;
   }
-
-  .bio-progress-bar-7 span {
+  .bio-progress-bar-7 span{
     left: 87.7%;
   }
-
   /* work section  */
   .section-work-data .grid-four-col {
     grid-template-columns: 1fr 1fr;
   }
-
   /* services section  */
   .section-services .grid-three-col {
     grid-template-columns: 1fr;
   }
-
-  .section-portfolio .grid-three-col {
+  .section-portfolio .grid-three-col{
     grid-template-columns: 1fr;
   }
-
-  .portfolio-images {
+  .portfolio-images{
     width: 300px;
   }
-
-  .common-heading {
+  .common-heading{
     font-size: 20px;
   }
-
-  .section-portfolio .p-btns {
+  .section-portfolio .p-btns{
     margin-left: 20px;
   }
-
-  .section-portfolio .p-btn {
+  .section-portfolio .p-btn{
     margin: 0 10px;
     padding: 10px 15px;
   }

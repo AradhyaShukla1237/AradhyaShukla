@@ -20,7 +20,7 @@
 
 <body>
   <div id="preloader">
-
+    <div class="loader"></div>
   </div>
   <header class="header">
     <img src="images/logo.jpg" alt="aradhya shukla logo" class="logo" />
@@ -578,17 +578,15 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="index.js"></script>
   <script>
+      window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+      });
     var typed = new Typed('#element', {
       strings: ['FrontEnd Developer', 'Graphic Designer', 'UI/UX Designer', 'Freelancer', 'Content Writer', 'Copywriter',],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true
-    });
-  </script>
-  <script>
-    var loader = document.getElementById("preloader")
-    window.addEventListener("load", function () {
-      loader.style.display = "none";
     });
   </script>
 </body>

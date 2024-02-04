@@ -1424,9 +1424,6 @@ Media Queries Section
   #element{
     font-size: 3.5rem;
   }
-  #preloader{
-    background-size: 15%;
-  }
   .section-hero-data .hero-top-data {
     /* align-self: flex-start; */
     font-size: 4rem;
@@ -1491,9 +1488,6 @@ Media Queries Section
   .hero-typing-text{
     font-size: 3rem;
     margin-left: -5px;
-  }
-  #preloader{
-    background-size: 10%;
   }
   #element{
     font-size: 3rem;
